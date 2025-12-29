@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xfa generator="AdobeLiveCycleDesigner_V11.0.9.20251007.1.66_SAP" APIVersion="3.6.25280.0"?>
-<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2025-12-29T12:23:30Z" uuid="7d7546d0-327a-4cbb-88e6-4b8f16497566">
+<xdp:xdp xmlns:xdp="http://ns.adobe.com/xdp/" timeStamp="2025-12-29T12:30:45Z" uuid="7d7546d0-327a-4cbb-88e6-4b8f16497566">
 <template xmlns:xliff="urn:oasis:names:tc:xliff:document:1.1" xmlns="http://www.xfa.org/schema/xfa-template/3.6/">
    <?formServer defaultPDFRenderFormat acrobat11.0dynamic?>
    <?formServer allowRenderCaching 0?>
@@ -9736,7 +9736,7 @@ j7Ox5jlZfQN8wH9f1qfaFwBRIoQFl4PHNNMD/9k=</image>
                </field>
                <occur max="-1"/>
                <?templateDesigner previewDataCount 20?>
-               <subform name="Bookings_Table" layout="table" columnWidths="27.693mm 6.791653in">
+               <subform name="Bookings_Table" layout="table" columnWidths="27.693mm 6.791681in">
                   <subform layout="row" name="Main_header" id="overflowLeader_ID" x="0.002mm" y="0mm">
                      <draw name="AirlineId">
                         <ui>
@@ -9784,7 +9784,7 @@ j7Ox5jlZfQN8wH9f1qfaFwBRIoQFl4PHNNMD/9k=</image>
                      <keep intact="none"/>
                      <?templateDesigner expand 1?></subform>
                   <subform name="DATA" layout="row" x="0.002mm" y="0mm">
-                     <field name="CARRID" w="62mm" h="9mm">
+                     <field name="CARRID" w="62mm" h="10.448mm">
                         <ui>
                            <textEdit>
                               <margin/>
@@ -9911,7 +9911,7 @@ j7Ox5jlZfQN8wH9f1qfaFwBRIoQFl4PHNNMD/9k=</image>
                            </draw>
                            <?templateDesigner expand 1?></subform>
                         <subform name="DATA" layout="row">
-                           <field name="CONNID" w="62mm" h="0.354333in" y="0mm">
+                           <field name="CONNID" w="62mm" h="0.207236in" y="0mm">
                               <ui>
                                  <textEdit>
                                     <margin/>
@@ -9931,7 +9931,7 @@ j7Ox5jlZfQN8wH9f1qfaFwBRIoQFl4PHNNMD/9k=</image>
                                  <edge/>
                               </border>
                            </field>
-                           <field name="FLDATE" x="62mm" w="62mm" h="0.354333in" y="0mm">
+                           <field name="FLDATE" x="62mm" w="62mm" h="0.207236in" y="0mm">
                               <ui>
                                  <dateTimeEdit>
                                     <margin/>
@@ -9954,7 +9954,7 @@ j7Ox5jlZfQN8wH9f1qfaFwBRIoQFl4PHNNMD/9k=</image>
                                  <edge/>
                               </border>
                            </field>
-                           <field name="FORCURAM" x="124mm" w="62mm" h="0.354333in" locale="es_ES" y="0mm">
+                           <field name="FORCURAM" x="124mm" w="62mm" h="0.207236in" locale="es_ES" y="0mm">
                               <ui>
                                  <numericEdit>
                                     <margin/>
@@ -9978,7 +9978,7 @@ j7Ox5jlZfQN8wH9f1qfaFwBRIoQFl4PHNNMD/9k=</image>
                                  <picture>zero{}|num{z,zzz,zz9.zzz}</picture>
                               </format>
                            </field>
-                           <field name="FORCURKEY" y="9mm" w="62mm" h="0.354333in">
+                           <field name="FORCURKEY" y="9mm" w="62mm" h="0.207236in">
                               <ui>
                                  <textEdit>
                                     <margin/>
@@ -10001,7 +10001,7 @@ j7Ox5jlZfQN8wH9f1qfaFwBRIoQFl4PHNNMD/9k=</image>
                            <assist role="TR"/>
                            <occur max="-1"/>
                            <bind match="dataRef" ref="$.DATA[*]"/>
-                           <subform name="CONNECTIONS" h="12.001mm" y="0mm">
+                           <subform name="CONNECTIONS" h="8.296mm" y="0mm">
                               <margin leftInset="1mm" rightInset="1mm" topInset="1mm" bottomInset="1mm"/>
                               <occur min="0"/>
                               <bind match="dataRef" ref="$record.BOOKINGS.DATA[*].CONNECTIONS"/>
@@ -10011,19 +10011,20 @@ j7Ox5jlZfQN8wH9f1qfaFwBRIoQFl4PHNNMD/9k=</image>
                               <border>
                                  <edge/>
                               </border>
-                              <field name="FLTIME" y="0mm" w="43.857mm" h="9mm">
+                              <field name="FLTIME" y="0mm" w="43.857mm" h="6.295mm">
                                  <ui>
                                     <dateTimeEdit/>
                                  </ui>
                                  <font typeface="Arial"/>
                                  <margin topInset="1mm" bottomInset="1mm" leftInset="1mm" rightInset="1mm"/>
                                  <para vAlign="middle"/>
-                                 <value>
-                                    <date/>
-                                 </value>
                                  <desc>
                                     <text name="Schema Annotation">Flight time</text>
                                  </desc>
+                                 <value>
+                                    <time/>
+                                 </value>
+                                 <bind match="dataRef" ref="$.FLTIME"/>
                               </field>
                               <?templateDesigner expand 1?></subform>
                            <?templateDesigner expand 1?></subform>
@@ -10055,8 +10056,8 @@ j7Ox5jlZfQN8wH9f1qfaFwBRIoQFl4PHNNMD/9k=</image>
       <?templateDesigner HyphenationExtra allowHow:3?>
       <?templateDesigner Hyphenation excludeInitialCap:1, excludeAllCaps:1, wordCharCnt:7, remainCharCnt:3, pushCharCnt:3?>
       <?templateDesigner expand 1?>
-      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 208 52 0003000B000C000F001000110013001400150018002400250026002700280029002A002C002F00300031003200330035003600370038004400450046004700480049004A004B004C004E004F005000510052005300550056005700580059005A005B005C005E0060 (),-.0125ABCDEFGILMNOPRSTUabcdefghiklmnoprstuvwxy{}?>
-      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 168 42 0003000B000C0011002400250026002700280029002A002C00300031003200330035003600370038004400450046004700480049004A004B004C004F00500051005200530055005600570058005B005C005E0060 ().ABCDEFGIMNOPRSTUabcdefghilmnoprstuxy{}?></subform>
+      <?renderCache.subset "Arial" 0 0 ISO-8859-1 4 180 45 0003000B000C000F001000110013001400150018002400250026002700280029002C002F00300031003300360037004400450046004700480049004A004B004C004E004F005000510052005300550056005700580059005A005C (),-.0125ABCDEFILMNPSTabcdefghiklmnoprstuvwy?>
+      <?renderCache.subset "Arial" 1 0 ISO-8859-1 4 144 36 00030011002400250026002700280029002C00300031003300360037004400450046004700480049004A004B004C004F00500051005200530055005600570058005B005C005E0060 .ABCDEFIMNPSTabcdefghilmnoprstuxy{}?></subform>
    <?templateDesigner DefaultPreviewDynamic 1?>
    <?templateDesigner WidowOrphanControl 0?>
    <?templateDesigner Grid show:1, snap:1, units:1, color:ff8080, origin:(0,0), interval:(62500,62500), objsnap:1, guidesnap:0, pagecentersnap:1?>
@@ -10080,7 +10081,7 @@ j7Ox5jlZfQN8wH9f1qfaFwBRIoQFl4PHNNMD/9k=</image>
    <?templateDesigner DefaultCaptionFontSettings face:Arial;size:10;weight:normal;style:normal?>
    <?templateDesigner DefaultValueFontSettings face:Arial;size:10;weight:normal;style:normal?>
    <?templateDesigner FormTargetVersion 36?>
-   <?templateDesigner Zoom 150?>
+   <?templateDesigner Zoom 159?>
    <?templateDesigner Rulers horizontal:1, vertical:1, guidelines:1, crosshairs:1?>
    <?templateDesigner DefaultPreviewDataFileName C:\Users\Usuario\OneDrive\Escritorio\Plataformas\BOOKS\Adobe_Forms\sample.xml?></template>
 <config xmlns="http://www.xfa.org/schema/xci/3.0/">
@@ -10407,7 +10408,7 @@ j7Ox5jlZfQN8wH9f1qfaFwBRIoQFl4PHNNMD/9k=</image>
 <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c015 81.161580, 2017/12/01-01:38:21        ">
    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
       <rdf:Description xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:desc="http://ns.adobe.com/xfa/promoted-desc/" rdf:about="">
-         <xmp:MetadataDate>2025-12-29T12:23:30Z</xmp:MetadataDate>
+         <xmp:MetadataDate>2025-12-29T12:30:45Z</xmp:MetadataDate>
          <xmp:CreatorTool>Adobe LiveCycle Designer 11.0</xmp:CreatorTool>
          <pdf:Producer>Adobe LiveCycle Designer 11.0</pdf:Producer>
          <xmpMM:DocumentID>uuid:7d7546d0-327a-4cbb-88e6-4b8f16497566</xmpMM:DocumentID>
