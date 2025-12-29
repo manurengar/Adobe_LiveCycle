@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xfa="http://www.xfa.org/schema/xfa-template/2.2/" xmlns:xfadata="http://www.xfa.org/schema/xfa-data/1.0/" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <xsd:import namespace="http://www.xfa.org/schema/xfa-data/1.0/"/>
+ <xsd:element name="data">
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element name="CUSTOMER">
+     <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <xsd:documentation>Flight customers</xsd:documentation>
+      <xsd:appinfo>
+       <dc:description>Flight customers</dc:description>
+      </xsd:appinfo>
+     </xsd:annotation>
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="ID">
+        <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <xsd:documentation>Customer Number</xsd:documentation>
+         <xsd:appinfo>
+          <dc:description>Customer Number</dc:description>
+          <dc:title>Cust. No.</dc:title>
+         </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+         <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="8"/>
+          <xsd:pattern value="\d+"/>
+         </xsd:restriction>
+        </xsd:simpleType>
+       </xsd:element>
+       <xsd:element name="NAME">
+        <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <xsd:documentation>Customer name</xsd:documentation>
+         <xsd:appinfo>
+          <dc:description>Customer name</dc:description>
+          <dc:title>Customer name</dc:title>
+         </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+         <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="25"/>
+         </xsd:restriction>
+        </xsd:simpleType>
+       </xsd:element>
+       <xsd:element name="FORM">
+        <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <xsd:documentation>Form of address</xsd:documentation>
+         <xsd:appinfo>
+          <dc:description>Form of address</dc:description>
+          <dc:title>Form of address</dc:title>
+         </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+         <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="15"/>
+         </xsd:restriction>
+        </xsd:simpleType>
+       </xsd:element>
+       <xsd:element name="STREET">
+        <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <xsd:documentation>Street</xsd:documentation>
+         <xsd:appinfo>
+          <dc:description>Street</dc:description>
+          <dc:title>Street</dc:title>
+         </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+         <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="30"/>
+         </xsd:restriction>
+        </xsd:simpleType>
+       </xsd:element>
+       <xsd:element name="POSTBOX">
+        <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <xsd:documentation>PO Box</xsd:documentation>
+         <xsd:appinfo>
+          <dc:description>PO Box</dc:description>
+          <dc:title>PO Box</dc:title>
+         </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+         <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10"/>
+         </xsd:restriction>
+        </xsd:simpleType>
+       </xsd:element>
+       <xsd:element name="POSTCODE">
+        <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <xsd:documentation>Postal Code</xsd:documentation>
+         <xsd:appinfo>
+          <dc:description>Postal Code</dc:description>
+          <dc:title>Post. code</dc:title>
+         </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+         <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="10"/>
+         </xsd:restriction>
+        </xsd:simpleType>
+       </xsd:element>
+       <xsd:element name="CITY">
+        <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <xsd:documentation>City</xsd:documentation>
+         <xsd:appinfo>
+          <dc:description>City</dc:description>
+          <dc:title>City</dc:title>
+         </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+         <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="25"/>
+         </xsd:restriction>
+        </xsd:simpleType>
+       </xsd:element>
+       <xsd:element name="COUNTRY">
+        <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <xsd:documentation>Country Code</xsd:documentation>
+         <xsd:appinfo>
+          <dc:description>Country Code</dc:description>
+          <dc:title>C/R</dc:title>
+         </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+         <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="3"/>
+         </xsd:restriction>
+        </xsd:simpleType>
+       </xsd:element>
+       <xsd:element name="EMAIL">
+        <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+         <xsd:documentation>Customer e-mail address</xsd:documentation>
+         <xsd:appinfo>
+          <dc:description>Customer e-mail address</dc:description>
+          <dc:title>E-Mail</dc:title>
+         </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:simpleType>
+         <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="40"/>
+         </xsd:restriction>
+        </xsd:simpleType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ALT_DATE">
+     <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <xsd:documentation>Date</xsd:documentation>
+      <xsd:appinfo>
+       <dc:description>Date</dc:description>
+      </xsd:appinfo>
+     </xsd:annotation>
+     <xsd:complexType>
+      <xsd:choice minOccurs="1" maxOccurs="1">
+       <xsd:element name="TRUE">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="SYSTEM_DATE" type="xsd:date">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>System Date</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>System Date</dc:description>
+             <dc:title>Date</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+          </xsd:element>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+       <xsd:element name="FALSE">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="DATE" type="xsd:date">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>System Date</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>System Date</dc:description>
+             <dc:title>Date</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+          </xsd:element>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:choice>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="FOOTER">
+     <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <xsd:documentation>Bussiness connection
+Smart Forms Text Module 
+ NAME = Z_FOOTER_MRG</xsd:documentation>
+      <xsd:appinfo>
+       <dc:description>Bussiness connection</dc:description>
+      </xsd:appinfo>
+     </xsd:annotation>
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:any namespace="http://www.w3.org/1999/xhtml" minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+      </xsd:sequence>
+      <xsd:attribute ref="xfadata:contentType" fixed="text/html"/>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="BOOKINGS" minOccurs="0" maxOccurs="1">
+     <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <xsd:documentation>Table for Flight Bookings</xsd:documentation>
+      <xsd:appinfo>
+       <dc:description>Table for Flight Bookings</dc:description>
+      </xsd:appinfo>
+     </xsd:annotation>
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="DATA" minOccurs="1" maxOccurs="unbounded">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="CARRID">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Airline Code</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Airline Code</dc:description>
+             <dc:title>ID</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="3"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="GROUP">
+           <xsd:complexType>
+            <xsd:sequence>
+             <xsd:element name="DATA" minOccurs="1" maxOccurs="unbounded">
+              <xsd:complexType>
+               <xsd:sequence>
+                <xsd:element name="CONNID">
+                 <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+                  <xsd:documentation>Flight Connection Number</xsd:documentation>
+                  <xsd:appinfo>
+                   <dc:description>Flight Connection Number</dc:description>
+                   <dc:title>No.</dc:title>
+                  </xsd:appinfo>
+                 </xsd:annotation>
+                 <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                   <xsd:maxLength value="4"/>
+                   <xsd:pattern value="\d+"/>
+                  </xsd:restriction>
+                 </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="FLDATE" type="xsd:date">
+                 <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+                  <xsd:documentation>Flight date</xsd:documentation>
+                  <xsd:appinfo>
+                   <dc:description>Flight date</dc:description>
+                   <dc:title>Date</dc:title>
+                  </xsd:appinfo>
+                 </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="FORCURAM">
+                 <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+                  <xsd:documentation>Booking price in foreign currency (dependent on location)</xsd:documentation>
+                  <xsd:appinfo>
+                   <dc:description>Booking price in foreign currency (dependent on location)</dc:description>
+                   <dc:title>Amount (for.currncy)</dc:title>
+                  </xsd:appinfo>
+                 </xsd:annotation>
+                 <xsd:simpleType>
+                  <xsd:restriction base="xsd:decimal">
+                   <xsd:totalDigits value="15"/>
+                   <xsd:fractionDigits value="2"/>
+                  </xsd:restriction>
+                 </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="FORCURKEY">
+                 <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+                  <xsd:documentation>Payment currency</xsd:documentation>
+                  <xsd:appinfo>
+                   <dc:description>Payment currency</dc:description>
+                   <dc:title>Curr.</dc:title>
+                  </xsd:appinfo>
+                 </xsd:annotation>
+                 <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                   <xsd:maxLength value="5"/>
+                  </xsd:restriction>
+                 </xsd:simpleType>
+                </xsd:element>
+               </xsd:sequence>
+              </xsd:complexType>
+             </xsd:element>
+            </xsd:sequence>
+           </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="CONNECTIONS" minOccurs="0" maxOccurs="1">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Table of Flight Connections</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Table of Flight Connections</dc:description>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:complexType>
+            <xsd:sequence>
+             <xsd:element name="FLTIME">
+              <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+               <xsd:documentation>Flight time</xsd:documentation>
+               <xsd:appinfo>
+                <dc:description>Flight time</dc:description>
+                <dc:title>FlghtTime</dc:title>
+               </xsd:appinfo>
+              </xsd:annotation>
+              <xsd:simpleType>
+               <xsd:restriction base="xsd:int">
+                <xsd:totalDigits value="10"/>
+               </xsd:restriction>
+              </xsd:simpleType>
+             </xsd:element>
+            </xsd:sequence>
+           </xsd:complexType>
+          </xsd:element>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="SUM_BOOKINGS" minOccurs="0" maxOccurs="1">
+     <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <xsd:documentation>Table for Flight Bookings</xsd:documentation>
+      <xsd:appinfo>
+       <dc:description>Table for Flight Bookings</dc:description>
+      </xsd:appinfo>
+     </xsd:annotation>
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element name="DATA" minOccurs="1" maxOccurs="unbounded">
+        <xsd:complexType>
+         <xsd:sequence>
+          <xsd:element name="MANDT">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Client</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Client</dc:description>
+             <dc:title>Clt</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="3"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CARRID">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Airline Code</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Airline Code</dc:description>
+             <dc:title>ID</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="3"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CONNID">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Flight Connection Number</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Flight Connection Number</dc:description>
+             <dc:title>No.</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="4"/>
+             <xsd:pattern value="\d+"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="FLDATE" type="xsd:date">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Flight date</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Flight date</dc:description>
+             <dc:title>Date</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="BOOKID">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Booking number</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Booking number</dc:description>
+             <dc:title>Booking</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="8"/>
+             <xsd:pattern value="\d+"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CUSTOMID">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Customer Number</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Customer Number</dc:description>
+             <dc:title>Cust. No.</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="8"/>
+             <xsd:pattern value="\d+"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CUSTTYPE">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Customer type</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Customer type</dc:description>
+             <dc:title>B/P cust.</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="1"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="SMOKER">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Smoker</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Smoker</dc:description>
+             <dc:title>Smoker</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="1"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LUGGWEIGHT">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Weight of Luggage</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Weight of Luggage</dc:description>
+             <dc:title>Wt</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:decimal">
+             <xsd:totalDigits value="8"/>
+             <xsd:fractionDigits value="4"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="WUNIT">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Weight Unit</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Weight Unit</dc:description>
+             <dc:title>in</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="3"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="INVOICE">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Invoice flag</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Invoice flag</dc:description>
+             <dc:title>Inv.flag</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="1"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CLASS">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Flight Class</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Flight Class</dc:description>
+             <dc:title>Class</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="1"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="FORCURAM">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Booking price in foreign currency (dependent on location)</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Booking price in foreign currency (dependent on location)</dc:description>
+             <dc:title>Amount (for.currncy)</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:decimal">
+             <xsd:totalDigits value="15"/>
+             <xsd:fractionDigits value="2"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="FORCURKEY">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Payment currency</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Payment currency</dc:description>
+             <dc:title>Curr.</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="5"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LOCCURAM">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Price of booking in local currency of airline</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Price of booking in local currency of airline</dc:description>
+             <dc:title>Amount (loc.currncy)</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:decimal">
+             <xsd:totalDigits value="15"/>
+             <xsd:fractionDigits value="2"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LOCCURKEY">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Local currency of airline</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Local currency of airline</dc:description>
+             <dc:title>Curr.</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="5"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ORDER_DATE" type="xsd:date">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Booking Date</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Booking Date</dc:description>
+             <dc:title>Book.date</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="COUNTER">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Number of sales office</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Number of sales office</dc:description>
+             <dc:title>SalesOff</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="8"/>
+             <xsd:pattern value="\d+"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="AGENCYNUM">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Travel Agency Number</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Travel Agency Number</dc:description>
+             <dc:title>Agency No.</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="8"/>
+             <xsd:pattern value="\d+"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CANCELLED">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Cancelation flag</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Cancelation flag</dc:description>
+             <dc:title>Ca</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="1"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="RESERVED">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Reservation flag</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Reservation flag</dc:description>
+             <dc:title>Reserved</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="1"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="PASSNAME">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Name of the Passenger</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Name of the Passenger</dc:description>
+             <dc:title>Name of the Passenger</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="25"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="PASSFORM">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Form of address</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Form of address</dc:description>
+             <dc:title>Form of address</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+           <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+             <xsd:maxLength value="15"/>
+            </xsd:restriction>
+           </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="PASSBIRTH" type="xsd:date">
+           <xsd:annotation xmlns:dc="http://purl.org/dc/elements/1.1/">
+            <xsd:documentation>Date of Birth of a Passenger</xsd:documentation>
+            <xsd:appinfo>
+             <dc:description>Date of Birth of a Passenger</dc:description>
+             <dc:title>DOB of Passenger</dc:title>
+            </xsd:appinfo>
+           </xsd:annotation>
+          </xsd:element>
+         </xsd:sequence>
+        </xsd:complexType>
+       </xsd:element>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+   </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+</xsd:schema>
